@@ -1,0 +1,35 @@
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Author" CONTENT="Tim Lechler">
+<META NAME="GENERATOR" CONTENT="DESMO-J 2.2.0">
+<TITLE>.\Symulacja działania przychodni_report.html</TITLE></HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+<A NAME="top"></A><br>
+<P><H2><DIV align=center>Symulacja działania przychodni Report</DIV></H2><P><DIV align=center><H3>Model Przychodnia</H3></DIV>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3 WIDTH="100%" >
+<TR VALIGN=TOP><TD><B><DIV align=left>Description</DIV></B></TD></TR>
+<TR VALIGN=TOP><TD>Ten model opisuje działanie przychodni. Losowi pacjenci kierowani są do losowego lekarza, a ich obsługa odbywa się wg kolejności zgłoszeń). Lekarze pracują wymiennie. Symulacja kończy się w momencie zakończenia sukcesem obsługi wszystkich pacjentów. Report drawn at 37.9293. Last reset at 0.0000.</TD></TR>
+</TABLE><P>
+<FONT SIZE=-1><A HREF=#top>top</A></FONT><P>
+<HR><DIV align=center><H3>Queues</H3></DIV>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3 WIDTH="100%" >
+<TR VALIGN=TOP><TD><B><DIV align=left>Title</DIV></B></TD><TD><B><DIV align=left>Qorder</DIV></B></TD><TD><B><DIV align=left>(Re)set</DIV></B></TD><TD><B><DIV align=left>Obs</DIV></B></TD><TD><B><DIV align=left>QLimit</DIV></B></TD><TD><B><DIV align=left>Qmax</DIV></B></TD><TD><B><DIV align=left>Qnow</DIV></B></TD><TD><B><DIV align=left>Qavg.</DIV></B></TD><TD><B><DIV align=left>Zeros</DIV></B></TD><TD><B><DIV align=left>max.Wait</DIV></B></TD><TD><B><DIV align=left>avg.Wait</DIV></B></TD><TD><B><DIV align=left>refus.</DIV></B></TD></TR>
+<TR VALIGN=TOP><TD>Kolejka pacjentów do recepcji. </TD><TD>FIFO</TD><TD>0.0000</TD><TD>51</TD><TD>unlimit.</TD><TD>1</TD><TD>0</TD><TD>0.01827</TD><TD>50</TD><TD>0.6930</TD><TD>0.0135</TD><TD>0</TD></TR>
+<TR VALIGN=TOP><TD>Kolejka pacjentów do lekarza(y). 1. </TD><TD>FIFO</TD><TD>0.0000</TD><TD>2</TD><TD>unlimit.</TD><TD>1</TD><TD>0</TD><TD>0.0</TD><TD>2</TD><TD>0.0000</TD><TD>0.0000</TD><TD>0</TD></TR>
+<TR VALIGN=TOP><TD>Kolejka pacjentów do lekarza(y). 2. </TD><TD>FIFO</TD><TD>0.0000</TD><TD>48</TD><TD>unlimit.</TD><TD>1</TD><TD>0</TD><TD>0.0</TD><TD>48</TD><TD>0.0000</TD><TD>0.0000</TD><TD>0</TD></TR>
+<TR VALIGN=TOP><TD>Kolejka recpcjonistki(ek) do lekarza(y). </TD><TD>FIFO</TD><TD>0.0000</TD><TD>50</TD><TD>unlimit.</TD><TD>1</TD><TD>0</TD><TD>0.0</TD><TD>50</TD><TD>0.0000</TD><TD>0.0000</TD><TD>0</TD></TR>
+<TR VALIGN=TOP><TD>Kolejka wolnych lekarzy. </TD><TD>FIFO</TD><TD>0.0000</TD><TD>101</TD><TD>unlimit.</TD><TD>2</TD><TD>1</TD><TD>1.66778</TD><TD>89</TD><TD>13.9352</TD><TD>0.6263</TD><TD>0</TD></TR>
+<TR VALIGN=TOP><TD>Kolejka wolnych recepjocnistek. </TD><TD>FIFO</TD><TD>0.0000</TD><TD>49</TD><TD>unlimit.</TD><TD>1</TD><TD>1</TD><TD>0.93019</TD><TD>43</TD><TD>12.2873</TD><TD>0.7200</TD><TD>0</TD></TR>
+</TABLE><P>
+<FONT SIZE=-1><A HREF=#top>top</A></FONT><P>
+<HR><DIV align=center><H3>Distributions</H3></DIV>
+<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=3 WIDTH="100%" >
+<TR VALIGN=TOP><TD><B><DIV align=left>Title</DIV></B></TD><TD><B><DIV align=left>(Re)set</DIV></B></TD><TD><B><DIV align=left>Obs</DIV></B></TD><TD><B><DIV align=left>Type</DIV></B></TD><TD><B><DIV align=left>Parameter 1</DIV></B></TD><TD><B><DIV align=left>Parameter 2</DIV></B></TD><TD><B><DIV align=left>Seed</DIV></B></TD></TR>
+<TR VALIGN=TOP><TD>Czas badania przez lekarza. </TD><TD>0.0000</TD><TD>50</TD><TD>Real Uniform</TD><TD>1.0</TD><TD>30.0</TD><TD>71529105</TD></TR>
+<TR VALIGN=TOP><TD>Czas rejestrowania pacjenta przez recepcjonistkę. </TD><TD>0.0000</TD><TD>51</TD><TD>Real Uniform</TD><TD>1.0</TD><TD>1.0</TD><TD>91080577</TD></TR>
+<TR VALIGN=TOP><TD>Czas przybycia pacjenta do przychodni. </TD><TD>0.0000</TD><TD>54</TD><TD>Negative Exponential</TD><TD>15.0</TD><TD> </TD><TD>43946618</TD></TR>
+<TR VALIGN=TOP><TD>Czas przebywania recepjonistki u lekarza. </TD><TD>0.0000</TD><TD>50</TD><TD>Negative Exponential</TD><TD>2.0</TD><TD> </TD><TD>44944377</TD></TR>
+</TABLE><P>
+<FONT SIZE=-1><A HREF=#top>top</A></FONT><P>
+<FONT SIZE=-2>created using <A HREF=http://www.desmoj.de>DESMO-J</A> Version 2.2.0 at Mon Nov 29 23:54:51 CET 2010 - DESMO-J is licensed under <A HREF=http://www.apache.org/licenses/LICENSE-2.0>Apache License, Version 2.0</A></FONT>
+</BODY></HTML>
